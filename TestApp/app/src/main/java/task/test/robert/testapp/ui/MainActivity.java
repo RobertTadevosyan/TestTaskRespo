@@ -110,12 +110,13 @@ public class MainActivity extends AppCompatActivity implements RecyclerInterface
             public void success(Object object) {
                 boardList.add((Board) object);
                 adapter.notifyDataSetChanged();
-                System.out.println();
+               //NOTE:: There can be also called get All boards request to get all boards sorted by server side at once.
+               //getAllProjects();
             }
 
             @Override
             public void fail(String error, int errorCode) {
-                System.out.println();
+                System.out.println(error);
             }
         });
 
